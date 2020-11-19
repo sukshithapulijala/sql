@@ -1,0 +1,103 @@
+
+0) Abstract 
+	- What the paper is about?
+	- Our approach in writing this paper. 
+
+1) Introduction
+	- What are SQL & NoSQL databases? 
+	- Just brief intro.
+	- Examples of respective databases
+	- Just a bit about structure, features and
+	  design principles.
+	- An image for each db.
+
+	"SQl  - CODD Design"
+
+2) Background
+	- Time they were developed.
+	- Why they were adopted by large tech 	
+	  companies.
+	- Most used db in respective category
+	  and time/application they got popular.
+
+	"NoSQL - BSON"
+
+3) Properties
+	- Detailed Explainations
+	- About DB Schemas, type of data 
+	  that cann be stored 
+	- An image for each 
+
+	"SQL -CRUD,ACID ; NoSQL - CAP"
+
+4) Data Models in NoSQL
+	- Key-Value DBs ( Redis )
+	- Document Store Databases (MongoDb/CouchBase)
+	- Wide Column Stores (Cassandra/DynamoDb)
+	- Graph Stores (Neo4j/Redis Graph)
+
+	- An image for each, if possible
+
+	"Evalution of parameters for Each kind of database"
+
+	-------------"Table???"----------------
+
+5) Features in Databases RDBMS/NoSQL
+	- Same feature matter but a bit detailed
+
+6) Comparison of RDBMS and NoSQL
+	- Comparision of two specific dbs
+	- Query Processing
+
+	-------------"Tables???"----------------
+
+7) Essential Security Features in Databases
+	- Security Features discussing
+	- Some specific issues in mongo
+
+	-------------"Table???"----------------
+
+8) Indexing Techniques in NoSQL
+	- Tree Indexing 
+	- B Trees
+	- AVL 
+	- O2
+
+9) Case Study
+	- comparison between SQL database management system and No SQL 
+	- Oracle Db and Mongo Db
+	- as seen from a user point of view 
+		--system requirements, 
+		-- os you can install them on
+		-- syntax differences
+		-- drivers to performance differences in query time
+		-- insert time and update time on an identical test database
+
+	" Change Queries?? -- 
+	  No much difference in changing"
+
+10) Tradeoffs
+	-- Scenarios in which sql/nosql is preferred 
+		over the other.
+
+11) Conclusion
+	-- What database to decide? 
+	-- Decision Tree to help decide based on
+		requirements and application.
+
+
+12) References
+
+
+abstract
+introdution
+background
+analysis of rdms and nosql (Postgres, mongodb)
+	design principles
+	data models
+	comparision
+	features
+	security
+
+
+
