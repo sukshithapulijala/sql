@@ -52,7 +52,7 @@ The two basic properties of RDMS are CRUD, the necessary operations to implement
 **ACID** – stands for Atomicity, Consistency, Isolation and Durability. These are the methods that attempt to define and solve the concurrency issues in the RDBMS. Atomicity defines that any transaction must be atomic i.e. must be completed in full or must be never done. This methods groups all the data together as single unit, as an atomic unit of data. Consistency defines that the database must maintain a stable state, be consistent, before and after any transaction(s) rather than an in-consistent or corrupted state. Isolation defines that multiple transactions can occur concurrently, each in its own isolated state without interference and without leading to any inconsistency in the database. Durability defines that the data, once written or modified in the database, must be written to the disk and persist even if a system failure occurs [10].    
 
 
-![alt text](./images/acid.png "Acid Properties")
+![alt text](./images/acid.jpg "Acid Properties")
 Figure 5 RDBMS ACID properties
 <br>
 Label - All the relational database systems must support the above CRUD and ACID properties. 
@@ -72,6 +72,19 @@ Figure 7 B-Tree Complexities
 #### Data models  
 #### Comparison(PostgreSQL and MongoDB)
 #### Security features
+
+RDBMS Security
+
+Database security is essential for a database to protect the data stored in it, to preserve the integrity or confidentiality and to maintain the user privileges across the database. Thus, the database security measures must include protecting the underlying infrastructure of the database system, enforce backup strategies and access to the data itself [15]. Some of the key considerations for addressing these potential security issues and to keep the any database secure are 
+
+**PostgreSQL**
+PostgreSQL comes in with some good built-in security features and is addressed in various levels of the database management software [16]. Some of the important security features provided by Postgres are 
+* Database File Protection – All the files/data stored in the database are restricted from access, to read and modify, except for by the Postgres superuser.
+* User and Group Privileges – The superuser has the options to issue database or file access to other users directly or by creating groups and assigning the users to the groups. These groups can have limited or definite permissions to access a table, database, or file and can also define type of access to the respective. 
+* Control over Remote connections – By default, Postgres only allows local connections over Local Unix Socket [16]. The backend server must be started manually to allow non-local connections. The superuser can also configure/restrict these non-local clients to a particular IP address or to a set of IP domains.
+
+PostgreSQL has a flexible yet powerful built-in security methods to protect the database from exploits. But these methods must be properly implemented and configured based on the application it is used for. No configuration is ideal to every application and thus is not secure from every vulnerability [17].
+
 
 <br>
 <br>
@@ -93,3 +106,6 @@ Figure 7 B-Tree Complexities
 12. Indexing in DBMS [https://www.guru99.com/indexing-in-database.html](https://www.guru99.com/indexing-in-database.html)
 13. PostgreSQL Documentation - Indexing [https://www.postgresql.org/docs/9.5/indexes-types.html#:~:text=PostgreSQL%20provides%20several%20index%20types,fit%20the%20most%20common%20situations](https://www.postgresql.org/docs/9.5/indexes-types.html#:~:text=PostgreSQL%20provides%20several%20index%20types,fit%20the%20most%20common%20situations)
 14. Introduction to B-tree [https://www.geeksforgeeks.org/introduction-of-b-tree-2/](https://www.geeksforgeeks.org/introduction-of-b-tree-2/) 
+15. DBMS Security [https://www.imperva.com/learn/data-security/database-security/#:~:text=The%20most%20common%20ways%20that,for%20compromises%20are%20as%20follows](https://www.imperva.com/learn/data-security/database-security/#:~:text=The%20most%20common%20ways%20that,for%20compromises%20are%20as%20follows)
+16.Security in PostgreSQL [https://www.postgresql.org/docs/7.0/security.htm](https://www.postgresql.org/docs/7.0/security.htm)
+17. vulnerabilities in PostgreSQL [https://www.upguard.com/blog/10-ways-to-bolster-postgresql-security](https://www.upguard.com/blog/10-ways-to-bolster-postgresql-security)
