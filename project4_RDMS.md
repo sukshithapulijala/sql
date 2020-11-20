@@ -62,19 +62,24 @@ Figure 5 RDBMS ACID properties
 <br>
 Label - All the relational database systems must support the above CRUD and ACID properties. 
 
+#### NoSQL
+![alt text](./images/nosql-dms.png "NoSQL DMS")
+<br>
+Figure 6 NoSQL DMS
+
 #### Indexing
 In RDBMS, Indexing is a special data structure technique which allows the user to look up the records from the database efficiently [11]. This data structure, known as index, contains two columns – the first column holds the primary or candidate key of the table and the second column contains the pointers of the address of the data in the disk. The indexing technique defines the type of file system of a database. There are various types of indexing techniques such as Primary Indexing or Sequential File Organization, Secondary Indexing or Hash File Indexing and Multi-level Indexing [12]. Each indexing technique has its own algorithm and the database engine, or the user has the option to use the best suited technique to different types of queries. PostgreSQL provides several indexing techniques such as B-Tree, Hash and Gist [13]. By default, PostgreSQL, and many other RDBMS engines, uses B-Tree indexing which is the best fit for most common queries.
 
 ![alt text](./images/b-tree.jpeg "Sample B-Tree")
 <br>
-Figure 6 Sample B-Tree
+Figure 7 Sample B-Tree
 
 
 **B-Tree** is the widely used, multi-level indexing format and self-balancing tree data structure in DBMS which stores data in its node in sorted order. The main purpose of the B-tree is to significantly reduce the times of disk access. All the leaf nodes of the B-tree signify actual data pointers and each node has two references to its two child nodes. In self-balancing search trees, it is assumed that all the data is in the main memory. Usually, the node-size or height of the B-tree is kept equal to the disk block size and thus total disk access for most operations are reduced significantly. This total disk accesses of B-tree is lower than those of other balanced Binary Search Trees like AVL, O2-Tree [14].    
 
 ![alt text](./images/b-tree-comp.jpg "B-Tree Complexities")
 <br>
-Figure 7 B-Tree Complexities
+Figure 8 B-Tree Complexities
 
 <!-- #### Data models   -->
 
@@ -95,8 +100,13 @@ PostgreSQL has a flexible yet powerful built-in security methods to protect the 
 
 ![alt text](./images/security.png "DBMS Security")
 <br>
-Figure 8 DBMS Security
+Figure 9 DBMS Security
+
 #### Comparison(PostgreSQL and MongoDB)
+![alt text](./images/comparision.png "RDBMS-NoSQL Comparision")
+<br>
+Figure 10 RDBMS-NoSQL Comparision
+
 
 <br>
 <br>
