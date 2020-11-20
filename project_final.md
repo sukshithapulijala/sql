@@ -12,6 +12,13 @@ Figure 1 RDBMS Structure [2]
 <br>
 <br>
 
+NoSQL is also known as non-relational database management systems. NoSQL is different from relational database management system (RDBMS).  It is designed for large amount of data which is distributed across servers. This type of database requires no fixed schemas, join operations and horizontal scaling [18]. 
+
+In relational database, schema need to be defined before inserting data into the data while in NoSQL there is no schema, data can be inserted directly. RDBMS requirements to perform SQL join activities to blend at least two relations simultaneously, which can prompt execution bottlenecks. NoSQL has no join operations so data retrieval is fast. NoSQL also allows different and unstructured data. NoSQL is used for session store, mobile apps, e-commerce [19]. 
+
+
+
+
 <!-- Data is produced and prepared more quickly now than any other time before. Lately as more than 2.5 trillion of Data is created consistently. Data will keep on expanding in volumes later at an outstanding level.  This developing interest brought about various NoSQL Database Management Systems (DBMS’s), with an emphasis on execution, depend-ability, and consistency. Various existing ordering structures were reused and refined to upgrade search and read execution.
  
 The SQL scalability issue was perceived by organizations with tremendous, developing information and foundation needs, for example, Google, Amazon, and Facebook. They concocted their own answers for the issue – advancements like Big Data, DynamoDB, and Cassandra. NoSQL stands for “Not only SQL”.  The data in the NoSQL is not stored as tables that is in Relational Databases. NoSQL has a SQL like syntax.  NoSQL Databases offers straight forward plan, better control on accessing data by sup-porting horizontal scaling for many machines. 
