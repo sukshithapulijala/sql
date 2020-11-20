@@ -38,12 +38,12 @@ PostgreSQL has earned a strong reputation for its proven architecture, reliabili
 ### Analysis of rdbms and nosql (Postgres, mongodb)
 <br>
 
-#### Design principles
+##### Design principles
 Dr. E. F. Codd defined twelve principles [7] of relational databases which continue to be the litmus test for database programs to validate their “relational” characteristic. These rules only apply to the database engine rather than to the applications development and the database engine that does not meet all the rules is not fully ‘relational’. Though most of the modern databases does not comply with all the rules, they still are considered relational. 
 
 In a well-designed relational database data is stored in the form of tables and can be accessed at any time. Each table comprises of rows and columns. The data here is stored in the form of objects. A proper RDBMS contains no duplicate rows, and each table has a primary key, a unique identifier constructed from one or more columns [8]. A table can be linked to another table through the other table’s primary key. The column (key) of the current table which is referencing the other table’s primary key is called the Foreign key. A table can have multiple foreign keys. Along with tables RDBMS also have views which are searchable objects. Though data will not be stored in the views, they are referred to as virtual tables since they can be queried like tables [9]. RDBMS has an interesting feature called referential integrity. Referential integrity states that a value to be entered in the foreign key field should be in the primary key field first. In RDBMS systems data must closely follow the database definition. If for some reason, there is any discrepancy then database will throw an error [8].
 
-#### Properties
+##### Properties
 
 The two basic properties of RDMS are CRUD, the necessary operations to implement a persistent storage application and ACID, the properties to maintain consistency across the database.
 
@@ -53,12 +53,22 @@ The two basic properties of RDMS are CRUD, the necessary operations to implement
 
 
 ![alt text](./images/acid.png "Acid Properties")
-Figure 4 RDBMS ACID properties
+Figure 5 RDBMS ACID properties
+<br>
 Label - All the relational database systems must support the above CRUD and ACID properties. 
 
-
-#### Features
 #### Indexing
+In RDBMS, Indexing is a special data structure technique which allows the user to look up the records from the database efficiently [11]. This data structure, known as index, contains two columns – the first column holds the primary or candidate key of the table and the second column contains the pointers of the address of the data in the disk. The indexing technique defines the type of file system of a database. There are various types of indexing techniques such as Primary Indexing or Sequential File Organization, Secondary Indexing or Hash File Indexing and Multi-level Indexing [12]. Each indexing technique has its own algorithm and the database engine, or the user has the option to use the best suited technique to different types of queries. PostgreSQL provides several indexing techniques such as B-Tree, Hash and Gist [13]. By default, PostgreSQL, and many other RDBMS engines, uses B-Tree indexing which is the best fit for most common queries.
+
+![alt text](./images/b-tree.jpeg "Sample B-Tree")
+Figure 6 Sample B-Tree
+
+
+**B-Tree** is the widely used, multi-level indexing format and self-balancing tree data structure in DBMS which stores data in its node in sorted order. The main purpose of the B-tree is to significantly reduce the times of disk access. All the leaf nodes of the B-tree signify actual data pointers and each node has two references to its two child nodes. In self-balancing search trees, it is assumed that all the data is in the main memory. Usually, the node-size or height of the B-tree is kept equal to the disk block size and thus total disk access for most operations are reduced significantly. This total disk accesses of B-tree is lower than those of other balanced Binary Search Trees like AVL, O2-Tree [14].    
+
+![alt text](./images/b-tree-comp.jpg "B-Tree Complexities")
+Figure 7 B-Tree Complexities
+
 #### Data models  
 #### Comparison(PostgreSQL and MongoDB)
 #### Security features
@@ -79,3 +89,7 @@ Label - All the relational database systems must support the above CRUD and ACID
 8. Referential Integrity and Relational Database Design [https://web.mit.edu/11.521/www/lectures/lecture10/lec_data_design.html](https://web.mit.edu/11.521/www/lectures/lecture10/lec_data_design.html)
 9. Relational Database View [https://www.essentialsql.com/what-is-a-relational-database-view/#:~:text=A%20database%20view%20is%20a,contain%20a%20subset%20of%20information](https://www.essentialsql.com/what-is-a-relational-database-view/#:~:text=A%20database%20view%20is%20a,contain%20a%20subset%20of%20information)
 10. ACID and CRUD operations [https://informationtechsales.blogspot.com/2014/11/databases-sql-crud-and-acid-102.html](https://informationtechsales.blogspot.com/2014/11/databases-sql-crud-and-acid-102.html)
+11. RDBMS Indexing basics [https://datageek.blog/en/2018/06/05/rdbms-basics-indexes-and-clustered-indexes/](https://datageek.blog/en/2018/06/05/rdbms-basics-indexes-and-clustered-indexes/)
+12. Indexing in DBMS [https://www.guru99.com/indexing-in-database.html](https://www.guru99.com/indexing-in-database.html)
+13. PostgreSQL Documentation - Indexing [https://www.postgresql.org/docs/9.5/indexes-types.html#:~:text=PostgreSQL%20provides%20several%20index%20types,fit%20the%20most%20common%20situations](https://www.postgresql.org/docs/9.5/indexes-types.html#:~:text=PostgreSQL%20provides%20several%20index%20types,fit%20the%20most%20common%20situations)
+14. Introduction to B-tree [https://www.geeksforgeeks.org/introduction-of-b-tree-2/](https://www.geeksforgeeks.org/introduction-of-b-tree-2/) 
