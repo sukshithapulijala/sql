@@ -45,6 +45,9 @@ Figure 2 Flat File Database model
 <br>
 Figure 3 Hierarchical Database Model
 
+
+
+
 #### RDBMS
 RDBMS overcame most of these limitations by providing simple database design, a language to access data easily, support for large amounts of data with multi-level relationships between data sets and many more. Dr. E.F. Codd, an IBM research scientist and mathematician, designed the relational model. Also, in this model, the database’s schema is disconnected from physical information storage, and this became the standard principle for database systems [3]. The main focal points of this model were to further reduce data redundancy and to improve data integrity within database systems [1]. In RDBMS, the data is stored in tables, or relations and these tables are divided into rows (records) and columns (fields). Relational databases are famous for handling multitudes of data and complex queries.
 
@@ -52,7 +55,7 @@ Both RDBMS and NoSQL databases provide various benefits of their own and aim to 
 
 #### NoSQL
 
-Data is produced and prepared more quickly now than any other time before. Lately as more than 2.5 trillion of Data is created consistently. Data will keep on expanding in volumes later at an outstanding level.  This developing interest brought about various NoSQL Database Management Systems (DBMS’s), with an emphasis on execution, depend-ability, and consistency. Various existing ordering structures were reused and refined to upgrade search and read execution.
+Data is produced and prepared more quickly now than any other time before. Lately as more than 2.5 trillion of Data is created consistently. Data will keep on expanding in volumes later at an outstanding level.  This developing interest brought about various NoSQL Database Management Systems (DBMS’s), with an emphasis on execution, depend-ability, and consistency. Various existing ordering structures were reused and refined to upgrade search and read execution[27].
  
 The SQL scalability issue was perceived by organizations with tremendous, developing information and foundation needs, for example, Google, Amazon, and Facebook. They concocted their own answers for the issue – advancements like Big Data, DynamoDB, and Cassandra. NoSQL stands for “Not only SQL”.  The data in the NoSQL is not stored as tables that is in Relational Databases. NoSQL has a SQL like syntax.  NoSQL Databases offers straight forward plan, better control on accessing data by sup-porting horizontal scaling for many machines. 
  
@@ -82,7 +85,13 @@ PostgreSQL has earned a strong reputation for its proven architecture, reliabili
 
 #### MongoDB
 
-MongoDB is a horizontally scalable, document-oriented NoSQL Database. The software is written in C++ and uses JSON-like documents.  MongoDB architecture consists of collections and documents. Tables are known as collections and records are known as documents. Document is a data structure where data is composed of field and value pairs. 
+MongoDB is a horizontally scalable, document-oriented NoSQL Database. The software is written in C++ and uses JSON-like documents.  
+
+![alt text](./images/graph.png "Popular NoSQL Database Engine Rankings")
+<br>
+Figure 5 Popular Database Engine Rankings[21]
+
+MongoDB architecture consists of collections and documents. Tables are known as collections and records are known as documents. Document is a data structure where data is composed of field and value pairs. 
  
 MongoDB can store any sort of information and hence-forth does not need any predefined patterns. This gives the client greater adaptability while making new fields in document. Document-oriented databases are substantially more adaptable. The structure of every document does not need to be consistent. Indeed, even enormous volumes of unstructured information can be obliged in the database.
 
@@ -108,7 +117,7 @@ The two basic properties of RDMS are CRUD, the necessary operations to implement
 
 ![alt text](./images/acid.jpg "Acid Properties")
 <br>
-Figure 5 RDBMS ACID properties
+Figure 6 RDBMS ACID properties
 <br>
 Label - All the relational database systems must support the above CRUD and ACID properties. 
 
@@ -120,7 +129,7 @@ NoSQL gives an API and utilizes decentralized engineering for the replication of
 
 **Data Models In NoSQL**
  
-There are 4 types of data models in NoSQL.
+There are 4 types of data models in NoSQL[24].
 
 **Key-value store:** Uses key value pairs to store the data in the database. Keys must be unique, and values can be of any data type including URLs. Key length varies from database to database. The size of the key is significant here, as a long key can cause execution issues though too short a key can cause coherence issues. Key-value database models are useful for Ecommerce. Examples are Oracle NoSQL database and Redis.
 
@@ -132,7 +141,7 @@ There are 4 types of data models in NoSQL.
 
 ![alt text](./images/nosql-dms.png "NoSQL DMS")
 <br>
-Figure 6 NoSQL DMS
+Figure 7 NoSQL DMS
 
  
 <!-- Lacking Schema:
@@ -140,7 +149,7 @@ NoSQL databases require no defined schemas before data entry. Without affecting 
  
 ##### Properties
  
-**BASE** - NoSQL databases follow BASE (Basically Available, Soft State, Eventual consistency) principles.
+**BASE** - NoSQL databases follow BASE (Basically Available, Soft State, Eventual consistency) principles[25].
  
 * Basically Available:  This states that the system ensures the accessibility of the data.
 
@@ -148,11 +157,17 @@ NoSQL databases require no defined schemas before data entry. Without affecting 
 
 * Eventual consistency: The system becomes eventually consistent as it is state will be modified when receiving input is stopped. Eventually the information is updated maintaining consistent database.
  
-**CAP** - stands for Consistency, Availability, and Partition tolerance.
+**CAP** - stands for Consistency, Availability, and Partition tolerance[28].
  
 * Consistency: Data existing on all machines must be indistinguishable after all update operations.
 * Availability: Data ought to be made open forever rather than transitory access.
 * Partition tolerance: Partition Tolerance is an assurance that the framework keeps on working notwithstanding subjective message loss or failure of part of the framework. Regardless of whether there is a network outage in the server and a portion of the PCs are in accessible, still, the system keeps on performing.
+
+<br>
+![alt text](./images/CAP.png "CAP theorem")
+<br>
+Figure 8 CAP theorem[22]
+
 
 #### Features of MongoDB
 
@@ -182,23 +197,60 @@ PostgreSQL provides several indexing techniques such as B-Tree, Hash and Gist [1
 
 ![alt text](./images/b-tree.jpeg "Sample B-Tree")
 <br>
-Figure 7 Sample B-Tree
+Figure 9 Sample B-Tree
 
 **B-Tree** is the widely used, multi-level indexing format and self-balancing tree data structure in DBMS which stores data in its node in sorted order. The main purpose of the B-tree is to significantly reduce the times of disk access. All the leaf nodes of the B-tree signify actual data pointers and each node has two references to its two child nodes. In self-balancing search trees, it is assumed that all the data is in the main memory. Usually, the node-size or height of the B-tree is kept equal to the disk block size and thus total disk access for most operations are reduced significantly. This total disk accesses of B-tree is lower than those of other balanced Binary Search Trees like AVL, O2-Tree [14].    
 
 ![alt text](./images/b-tree-comp.jpg "B-Tree Complexities")
 <br>
-Figure 8 B-Tree Complexities
+Figure 10 B-Tree Complexities
 
 ##### NoSQL
+Indexing is associating a key to its data record. Below are the commonly used indexing methods[26].
+
+**B-Tree Indexing:** B-Tree is one of the self-balancing trees which implement dynamic multi-level indexing. B-Tree reduces the frequency of accessing disk. A range is set for each node there by setting the height low. For the most part, the B-Tree node size is held equivalent to the disk block size. 
+Most popular B- Tree is B+-Tree where all keys are stored in leave nodes. Leaf nodes are connected to give requested access to the records. Some of the values of the key values show up in the internal nodes, to just go about as a medium to control the looking of a record. B+-Tree of n elements and t degree must satisfy below properties*.
+Each node contains at least (t-1)/2 keys.
+All nodes contain t -1 keys.
+Each node has number of keys in that node plus 1 child.
+All leaves are at same level.
+Degree of the tree depends on the block size in the disk.
+
+**T-Tree Indexing:** The structure of T-Tree is the combination of both AVL-Trees and B-Trees.  AVL-Trees are self-balancing binary trees while B-Trees are unbalanced trees with varying child node for each node.
+There are three types of nodes in T-Trees. 	T-node has a right child and left child, half node has only one child, and a leaf node has no children. Each node has more than one pair of tuples {key-value, pointer}. While there is comparability in query operations with that of AVL-Tree, T-Trees offer better execution over them.
+
+**O2-Tree Indexing:** It is the combination of Red-Black Tree and Binary Search Tree where leaf node contains the tuples {key-value, pointer}. O2-Tree enhances the current indexing method. O2-Tree of order m (m greater than or equal to 2) must satisfy below properties*. 
+Each node is either red or black. Root node is always black.
+Red node has both children black.
+Each leaf node is black and contains tuple.
+Leaf nodes have tuples between m/2 to m.
+Leaf nodes are doubly linked both in forward and backward directions.
 
 
 
 #### Security features
 
+Making the database secure is most important. Below are the security controls that help to deal with the security protocol.
+
+**Identification and Authentication requirements:** Databases can be accessed by users through various means. Authentication can be done by operating system or database.
+**Reviewing DB users and passwords:** Get a rundown of all User Accounts and role of each user account. Roles of user account must be reviewed to make sure users are having appropriate privileges. There should be a few rules for picking the passwords and clients ought to be confined.
+**Application system connections:** Enterprise applications are directly connected to the database with hardcoded passwords that change rarely. Those passwords must be encrypted and stored in user inaccessible areas.
+**Logging and Monitoring:** Data usage and user activities must be logged and monitored. 
+**Backup and Recovery:** Guarantee that a proper recovery and backup technique exists.
+***Vulnerability Analysis:** Known vulnerability assessment must be performed at regular time intervals. Proper action must be taken to mitigate.
+
+
+<br>
+![alt text](./images/Security features.jpg "Security features of RDBMS and NoSQL")
+<br>
+Figure 11 Comparison of security features of RDBMS and NoSQL
+
 **RDBMS Security**
 
 Database security is essential for a database to protect the data stored in it, to preserve the integrity or confidentiality and to maintain the user privileges across the database. Thus, the database security measures must include protecting the underlying infrastructure of the database system, enforce backup strategies and access to the data itself [15]. Some of the key considerations for addressing these potential security issues and to keep the any database secure are 
+
+
+
 
 **PostgreSQL**
 
@@ -211,18 +263,42 @@ PostgreSQL has a flexible yet powerful built-in security methods to protect the 
 
 ![alt text](./images/security.png "DBMS Security")
 <br>
-Figure 9 DBMS Security
+Figure 12 DBMS Security
+
+
+**MongoDB**
+
+Security was not an essential worry of MongoDB's designers. Thus, there are many "loopholes" in its design. 
+*	Data files in MongoDB are unencrypted and there are no techniques that would automatically encrypt sensitive information. 
+Explicit encryption of sensitive data must be implemented at operating system level.
+*	JavaScript is the internal scripting language in MongoDB that is vulnerable to SQL injection attack.
+*	Auditing actions on database in MongoDB is not provided. MongoDB stored information only about database creation but doesn’t store about inserts, updates or deletes.  
 
 #### Comparison(PostgreSQL and MongoDB)
 ![alt text](./images/comparision.png "RDBMS-NoSQL Comparision")
 <br>
-Figure 10 RDBMS-NoSQL Comparision
+Figure 13 RDBMS-NoSQL Comparision
 
 
 <br>
 <br>
 
-### Case study (big data)
+### Working with Big Data
+
+Big Data has many definitions like huge amounts of data with many types, data that is not easy to store in relational database. This type of data needs to be stored in large parallel systems with many servers. There has been exponential increase in data from past decade and it is becoming troublesome to store in relational database and retrieve it for analysis. 
+
+Following are the features of Big Data [30]
+
+*	Volume: enormous growth of information volume looked by enterprises.
+*	Variety: Different type of data generated which includes pictures, videos, geographical locations.
+*	Value: Business estimation of the information after examination. How much useful information is in a video clip.
+*	Velocity: How to rapidly gather information, yet in addition must realize how to measure, break down, and pass back the outcomes to clients.
+
+
+Until now, the RDBMS exists to help data management of different types notwithstanding the configuration. With the new idea of Big Data, it is regarded basic that new data management is made to help applications, for example, ongoing log records analysis, exchanges in online business, and information transferred web-based media. Disregarding powerful information recovery appeared by the RDBMS, such social technique is insufficient to deal with the enormous scope and diverse setup of information. Considering this, legitimate information the executives has been provisioned to help the Big Data the board utilizing the term NoSQL. Such a framework exhibits the capacity to adapt to data insertion and recovery activities for an enormous scope [23].
+
+NoSQL is designed for such data. NoSQL provides data partition and replication since it follows CAP theorem. As data is distributed on several servers, load on a single machine is reduced. In RDBMS, the framework ordinarily starts by building up the hypothetical and sane information models, while in the NoSQL data set, the methodology starts by arranging the application queries and design that the data model can adequately uphold.
+
 ### Conclusion
 ### References
 1. Introduction to RDMS [http://www.rjspm.com/PDF/BCA-428%20Oracle.pdf](http://www.rjspm.com/PDF/BCA-428%20Oracle.pdf)
@@ -246,3 +322,11 @@ Figure 10 RDBMS-NoSQL Comparision
 19. http://ezproxy.lib.usf.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=edsbl&AN=RN609394557&site=eds-live
 
 20. https://www.apptunix.com/blog/sql-or-nosql-database/
+21. graph - https://www.kdnuggets.com/2016/06/top-nosql-database-engines.html
+22. design principles - https://practice.geeksforgeeks.org/problems/cap-theorem
+23. big data - https://ieeexplore-ieee-org.ezproxy.lib.usf.edu/document/7890788
+24. NoSQL data models - https://highlyscalable.wordpress.com/2012/03/01/nosql-data-modeling-techniques/
+25. https://www.educba.com/nosql-data-models/
+26. https://pandorafms.com/blog/nosql-databases-the-definitive-guide/#:~:text=Indexing%20Structures%20for%20NoSQL%20Databases,indexing%2C%20and%20O2%2DTree%20indexing
+27. http://ijarcet.org/wp-content/uploads/IJARCET-VOL-4-ISSUE-5-1747-1753.pdf
+28. https://cloudxlab.com/assessment/displayslide/342/nosql-acid-properties-and-rdbms-story
