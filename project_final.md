@@ -163,7 +163,7 @@ NoSQL databases require no defined schemas before data entry. Without affecting 
 * Availability: Data ought to be made open forever rather than transitory access.
 * Partition tolerance: Partition Tolerance is an assurance that the framework keeps on working notwithstanding subjective message loss or failure of part of the framework. Regardless of whether there is a network outage in the server and a portion of the PCs are in accessible, still, the system keeps on performing.
 
-<br>
+
 ![alt text](./images/CAP.png "CAP theorem")
 <br>
 Figure 8 CAP theorem[22]
@@ -240,7 +240,7 @@ Making the database secure is most important. Below are the security controls th
 ***Vulnerability Analysis:** Known vulnerability assessment must be performed at regular time intervals. Proper action must be taken to mitigate.
 
 
-<br>
+
 ![alt text](./images/Security features.jpg "Security features of RDBMS and NoSQL")
 <br>
 Figure 11 Comparison of security features of RDBMS and NoSQL
