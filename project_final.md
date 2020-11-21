@@ -239,12 +239,10 @@ Making the database secure is most important. Below are the security controls th
 **Backup and Recovery:** Guarantee that a proper recovery and backup technique exists.
 ***Vulnerability Analysis:** Known vulnerability assessment must be performed at regular time intervals. Proper action must be taken to mitigate.
 
-
-
 ![alt text](./images/Security features.png "Security features of RDBMS and NoSQL")
 <br>
 Figure 11 Comparison of security features of RDBMS and NoSQL
-
+<br>
 **RDBMS Security**
 
 Database security is essential for a database to protect the data stored in it, to preserve the integrity or confidentiality and to maintain the user privileges across the database. Thus, the database security measures must include protecting the underlying infrastructure of the database system, enforce backup strategies and access to the data itself [15]. Some of the key considerations for addressing these potential security issues and to keep the any database secure are 
