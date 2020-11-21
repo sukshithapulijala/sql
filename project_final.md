@@ -241,7 +241,7 @@ Making the database secure is most important. Below are the security controls th
 
 
 
-![alt text](./images/Security features.jpg "Security features of RDBMS and NoSQL")
+![alt text](./images/Security features.png "Security features of RDBMS and NoSQL")
 <br>
 Figure 11 Comparison of security features of RDBMS and NoSQL
 
